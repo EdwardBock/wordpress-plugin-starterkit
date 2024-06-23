@@ -1,1 +1,1 @@
-# wordpress-plugin-starterkit
+# wordpress-starterkit

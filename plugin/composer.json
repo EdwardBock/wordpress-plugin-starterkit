@@ -1,0 +1,9 @@
+{
+  "name": "edwardbock/wordpress-plugin-starterkit",
+  "description": "Plugin starterkit",
+  "autoload": {
+    "psr-4": {
+      "WordPressPluginStarterkit\\": "classes"
+    }
+  }
+}

@@ -37,24 +37,24 @@ Use the build.sh script to build a production ready version of the plugin.
 ./bin/build.sh
 ```
 
-## Why Choose This Starterkit?
+## Why choose this starterkit?
 
 - **Maintainable Code:** Focus on creating long-term, maintainable code that is easy to understand and manage.
 - **Enhanced Developer Experience:** Designed to provide an excellent experience not just for you, but also for third-party plugin and theme developers.
 
-### Beyond Standard Guidelines
+### Beyond standard guidelines
 
 While this starterkit does not adhere to the traditional WordPress Coding 
 Guidelines, this is a deliberate choice. Instead, it follows the 
 recommendations from [Write Better WordPress Code](https://medium.com/write-better-wordpress-code) publications.
 
-### Key Features
+### Key features
 
 - **Professional-Grade Code Structure:** Benefit from a codebase that has been refined through extensive professional use.
 - **Future-Proof Your Development:** Ensure your plugins are built to last and easy to update.
 - **Community and Third-Party Friendly:** Create plugins and themes that are easy for others to understand and extend.
 
-### Key Technical Features
+### Key technical features
  
 - **PSR-4 Autoloading:** Optimize your code organization and loading times with PSR-4 autoloading, ensuring efficient and standardized file management.
 - **Scheduled Tasks:** Automate and manage recurring tasks seamlessly with built-in scheduling capabilities, enhancing your plugin's efficiency.

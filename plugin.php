@@ -6,8 +6,6 @@
  * Version:           X.X.X
  * Requires at least: X.X
  * Tested up to:      X.X.X
- * Author:            Edward Bock <hi@edwardbock.de>
- * Author URI:        http://www.edwardbock.de
  * Domain Path:       /plugin/languages
  */
 

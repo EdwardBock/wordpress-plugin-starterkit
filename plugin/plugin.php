@@ -1,14 +1,16 @@
 <?php
 
 /**
- * Plugin Name: %PLUGIN_NAME%
- * Description: %PLUGIN_DESCRIPTION%
- * Version: 1.0.0
- * Requires at least: 5.0
- * Tested up to: 6.5.3
- * Requires PHP: 8.0
- * Text Domain: %PLUGIN_DOMAIN%
- * License: https://www.gnu.org/licenses/gpl-3.0.html GPLv3
+ * Plugin Name:         WordPress Plugin Starterkit
+ * Description:         It is a starterkit for plugin development
+ * Version:             1.0.0
+ * Requires at least:   5.0
+ * Tested up to:        6.5.3
+ * Author:              Edward Bock <hi@edwardbock.de>
+ * Author URI:          http://www.edwardbock.de/starterkits/wordpress-plugin
+ * Requires PHP:        8.1
+ * Text Domain:         start
+ * License:             https://www.gnu.org/licenses/gpl-3.0.html GPLv3
  *
  */
 
@@ -31,7 +33,7 @@ class Plugin extends Components\Plugin {
 		new REST($this);
 		new Schedule($this);
 
-		if ( defined( 'WP_CLI' ) && \WP_CLI  ) {
+		if (defined('WP_CLI') && \WP_CLI) {
 			new CLI();
 		}
 	}

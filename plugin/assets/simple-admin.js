@@ -1,0 +1,1 @@
+console.debug("simple-admin.js");

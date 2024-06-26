@@ -21,6 +21,7 @@ require_once __DIR__ . "/vendor/autoload.php";
 class Plugin extends Components\Plugin {
 
 	const REST_NAMESPACE_V1 = "starterkit/v1/";
+	const SCHEDULE = "starterkit_tasks";
 
 	private Assets $assets;
 

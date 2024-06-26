@@ -1,0 +1,22 @@
+{
+  "name": "wordpress-plugin-starterkit",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "watch": "wp-scripts start",
+    "build": "wp-scripts build"
+  },
+  "dependencies": {
+    "@wordpress/scripts": "28.1.0"
+  },
+  "author": {
+    "name": "Edward Bock",
+    "email": "hi@edwardbock.de",
+    "url": "https://www.edwardbock.de/starterkits/wordpress-plugin"
+  },
+  "license": "GPL-3.0-or-later",
+  "engines": {
+    "node": ">=20",
+    "npm": ">=9"
+  }
+}

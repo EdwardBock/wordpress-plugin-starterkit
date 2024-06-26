@@ -30,6 +30,10 @@ class Plugin extends Components\Plugin {
 
 		new REST($this);
 		new Schedule($this);
+
+		if ( defined( 'WP_CLI' ) && \WP_CLI  ) {
+			new CLI();
+		}
 	}
 
 	public function onSiteActivation() {

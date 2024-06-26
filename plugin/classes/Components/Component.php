@@ -5,7 +5,7 @@ namespace WordPressPluginStarterkit\Components;
 
 abstract class Component {
 
-	private \WordPressPluginStarterkit\Plugin $plugin;
+	protected \WordPressPluginStarterkit\Plugin $plugin;
 
 	public function __construct(\WordPressPluginStarterkit\Plugin $plugin) {
 		$this->plugin = $plugin;
@@ -15,7 +15,7 @@ abstract class Component {
 	/**
 	 * overwrite this method in component implementations
 	 */
-	public function onCreate(){
+	public function onCreate(): void {
 		// init your hooks and stuff
 	}
 }

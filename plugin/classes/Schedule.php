@@ -18,6 +18,6 @@ class Schedule extends Component {
 	}
 
 	public function execute(): void {
-		// TODO: implement code that runs on schedule
+		// code that runs on schedule
 	}
 }

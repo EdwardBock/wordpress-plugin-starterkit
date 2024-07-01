@@ -5,6 +5,9 @@ PROJECT_PATH=$(pwd)
 BUILD_PATH="${PROJECT_PATH}/build"
 DEST_PATH="$BUILD_PATH/$PLUGIN_SLUG"
 
+echo "Install node modules..."
+npm i
+
 echo "Build production version of assets..."
 npm run build
 
@@ -15,15 +18,20 @@ mkdir -p "$DEST_PATH"
 echo "Syncing files..."
 rsync -rL "$PROJECT_PATH/plugin/" "$DEST_PATH/"
 
-echo "Cleanup files..."
+echo "Move into plugin..."
 cd "$DEST_PATH"
+
+echo "Composer dependencies and PSR-4 autoloading..."
 composer install --no-cache
 composer update --no-cache
 composer dump-autoload
+
+echo "Cleanup files..."
 rm "composer.json"
 rm "composer.lock"
-cd "$PROJECT_PATH"
 
+echo "Move back to root..."
+cd "$PROJECT_PATH"
 
 echo "Generating zip file..."
 cd "$BUILD_PATH" || exit

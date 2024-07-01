@@ -1,4 +1,6 @@
 plugin/vendor
+plugin/dist
+*.zip
 
 .idea
 

@@ -20,12 +20,24 @@ class Admin extends Component {
 			Plugin::HANDLE_STYLE_SIMPLE_ADMIN,
 			"assets/simple-admin.css"
 		);
+
+		$this->plugin->assets->registerScript(
+			Plugin::HANDLE_SCRIPT_ADMIN,
+			"dist/admin.js"
+		);
+		$this->plugin->assets->registerStyle(
+			Plugin::HANDLE_STYLE_ADMIN,
+			"dist/admin.css"
+		);
+
 	}
 
 	public function admin_enqueue_scripts(): void {
-
 		wp_enqueue_script(Plugin::HANDLE_SCRIPT_SIMPLE_ADMIN);
 		wp_enqueue_style(Plugin::HANDLE_STYLE_SIMPLE_ADMIN);
+
+		wp_enqueue_script(Plugin::HANDLE_SCRIPT_ADMIN);
+		wp_enqueue_style(Plugin::HANDLE_STYLE_ADMIN);
 	}
 
 }

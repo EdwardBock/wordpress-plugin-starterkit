@@ -1,7 +1,6 @@
 const path = require("path");
 const defaultConfig = require( '@wordpress/scripts/config/webpack.config.js' );
 
-
 module.exports = {
     ...defaultConfig,
     entry: {
@@ -9,6 +8,6 @@ module.exports = {
         gutenberg: path.resolve(__dirname, './src/gutenberg.ts'),
     },
     output: {
-        path: path.resolve(__dirname, "../plugin/dist"),
+        path: path.resolve(__dirname, "./plugin/dist"),
     },
 };

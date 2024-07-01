@@ -13,13 +13,17 @@ experience, ensuring your code is both maintainable and developer-friendly.
 ## Getting started
 
 ```shell
+## --- Once ---
 # if you do not have a local php and composer installation
 nix-shell
 
 # build the vendor directory for psr-4 autoloading
 # this needs to be executed after every root namespace change
+cd plugin
 composer dump-autoload
+cd ..
 
+## --- Every startup ---
 # Startup the wordpress docker environment.
 docker compose up -d
 
@@ -31,10 +35,10 @@ npm run watch
 Goto [localhost:8080](http://localhost:8080/), install WordPress, activate 
 the plugin and start modifying the code in the `plugin` directory.
 
-Use the build.sh script to build a production ready version of the plugin.
+Use the pack.sh script to pack a production ready version of the plugin into a zip file.
 
 ```shell
-./bin/build.sh
+./bin/pack.sh
 ```
 
 ## Why choose this starterkit?

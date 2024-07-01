@@ -4,7 +4,8 @@
   "description": "",
   "scripts": {
     "watch": "wp-scripts start",
-    "build": "wp-scripts build"
+    "build": "wp-scripts build",
+    "pack": "./bin/pack.sh"
   },
   "dependencies": {
     "@wordpress/scripts": "28.1.0"

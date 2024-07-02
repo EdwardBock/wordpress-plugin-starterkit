@@ -17,6 +17,8 @@
 namespace WordPressPluginStarterkit;
 
 use WordPressPluginStarterkit\Components\Assets;
+use WordPressPluginStarterkit\Source\PluginSchemaVersion;
+use WordPressPluginStarterkit\Source\ReadingTimeDatabase;
 
 require_once __DIR__ . "/vendor/autoload.php";
 
@@ -25,7 +27,7 @@ class Plugin extends Components\Plugin {
 	const DOMAIN = "starterkit";
 
 	/*
-	 * ACTIONS and FILTERES
+	 * ACTIONS and FILTERS
 	 */
 
 	/*
@@ -40,6 +42,8 @@ class Plugin extends Components\Plugin {
 	const HANDLE_STYLE_SIMPLE_ADMIN = "simple-admin";
 	const HANDLE_SCRIPT_ADMIN = "admin";
 	const HANDLE_STYLE_ADMIN = "admin";
+	const HANDLE_SCRIPT_GUTENBERG = "gutenberg";
+	const HANDLE_STYLE_GUTENBERG = "gutenberg";
 
 	/*
 	 * REST
@@ -55,19 +59,22 @@ class Plugin extends Components\Plugin {
 	 * Properties
 	 */
 	public Assets $assets;
-	public MyDatabase $database;
+	public PluginSchemaVersion $pluginSchemaVersion;
+	public ReadingTimeDatabase $readingTimeDB;
 
 	function onCreate(): void {
 		$this->assets = new Assets($this);
 
-		$this->database = new MyDatabase();
-		new MyDatabaseUpdates();
+		$this->pluginSchemaVersion = new PluginSchemaVersion();
+		$this->readingTimeDB = new ReadingTimeDatabase();
+		new Updates($this->pluginSchemaVersion);
 
 		new REST($this);
 		new Schedule($this);
 		new Admin($this);
-		new MyDatabaseUpdates($this);
 		new PostsTable($this);
+		new Gutenberg($this);
+		new WPQueryExtension($this);
 
 		if (defined('WP_CLI') && \WP_CLI) {
 			new CLI();
@@ -75,7 +82,7 @@ class Plugin extends Components\Plugin {
 	}
 
 	public function onSiteActivation(): void {
-		$this->database->createTables();
+		$this->readingTimeDB->createTables();
 	}
 }
 

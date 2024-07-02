@@ -26,12 +26,12 @@ abstract class Update {
 	 * @param int $version
 	 *
 	 */
-	abstract function setCurrentVersion(int $version);
+	abstract function setCurrentVersion(int $version): void;
 
 	/**
 	 * check for updates
 	 */
-	function checkUpdates() {
+	function checkUpdates(): void {
 		$current_version = $this->getCurrentVersion();
 
 		for ( $i = $current_version + 1; $i <= $this->getVersion(); $i ++ ) {

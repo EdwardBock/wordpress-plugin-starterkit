@@ -5,5 +5,8 @@
     "psr-4": {
       "WordPressPluginStarterkit\\": "classes"
     }
+  },
+  "require": {
+    "php": "~8.1"
   }
 }

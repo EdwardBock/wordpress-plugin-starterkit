@@ -18,7 +18,7 @@
 		"email": "hi@edwardbock.de",
 		"url": "https://www.edwardbock.de/starterkits/wordpress-plugin"
 	},
-	"license": "GPL-3.0-or-later",
+	"license": "MIT",
 	"engines": {
 		"node": ">=20",
 		"pnpm": ">=9"

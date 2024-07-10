@@ -10,7 +10,9 @@
  * Author URI:          http://www.edwardbock.de/starterkits/wordpress-plugin
  * Requires PHP:        8.1
  * Text Domain:         starterkit
- * License:             https://www.gnu.org/licenses/gpl-3.0.html GPLv3
+ * Domain Path:         /languages
+ * License:             GPLv3 or later
+ * License URI:         https://www.gnu.org/licenses/gpl-3.0.html
  *
  */
 

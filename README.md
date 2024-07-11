@@ -4,6 +4,15 @@ Are you looking to streamline your WordPress plugin development process?
 This starterkit is crafted from years of professional plugin development 
 experience, ensuring your code is both maintainable and developer-friendly.
 
+## In short and sweet
+
+- `/plugin` directory is the final WordPress plugin source code
+- `/src` contains all raw style and script files that will be transpiled into the `/plugin/dist` folder
+- `/bin` contains scripts for an release build
+- `docker-compose.yml` can be used to start a development isolated environment WordPress
+- `wp.ini` some php configurations
+- `plugin.php` if you want to clone this repo into your running project, this file will help
+
 ### Requirements
 
 - [Docker](https://www.docker.com/) or [Podman](https://podman.io/)

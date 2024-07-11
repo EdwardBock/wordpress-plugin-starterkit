@@ -79,3 +79,7 @@ recommendations from [Write Better WordPress Code](https://medium.com/write-bett
 - **Automatic Plugin API Documentation:** Ensure your plugin is well-documented with implicit API documentation, making it easier for other developers to understand and extend your code.
 
 Harness the power of these features to create robust, maintainable, and high-performing WordPress plugins and themes. Get started with our starter kit today and transform your development experience!
+
+## Liked it?
+
+[!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/edwardbock)

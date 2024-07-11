@@ -29,8 +29,14 @@ class Plugin extends Components\Plugin {
 	const DOMAIN = "starterkit";
 
 	/*
+	 * templates
+	 */
+	const THEME_FOLDER = "plugin-parts";
+
+	/*
 	 * ACTIONS and FILTERS
 	 */
+	const FILTER_ADD_TEMPLATES_PATHS = "starterkit_add_templates_paths";
 
 	/*
 	 * METAS and OPTIONS
@@ -63,9 +69,14 @@ class Plugin extends Components\Plugin {
 	public Assets $assets;
 	public PluginSchemaVersion $pluginSchemaVersion;
 	public ReadingTimeDatabase $readingTimeDB;
+	public Templates $templates;
 
 	function onCreate(): void {
 		$this->assets = new Assets($this);
+
+		$this->templates = new Templates($this);
+		$this->templates->useThemeDirectory(self::THEME_FOLDER);
+		$this->templates->useAddTemplatePathsFilter(self::FILTER_ADD_TEMPLATES_PATHS);
 
 		$this->pluginSchemaVersion = new PluginSchemaVersion();
 		$this->readingTimeDB = new ReadingTimeDatabase();

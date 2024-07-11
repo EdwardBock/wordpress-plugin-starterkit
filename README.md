@@ -13,11 +13,6 @@ experience, ensuring your code is both maintainable and developer-friendly.
 - `wp.ini` some php configurations
 - `plugin.php` if you want to clone this repo into your running project, this file will help
 
-### Requirements
-
-- [Docker](https://www.docker.com/) or [Podman](https://podman.io/)
-- [Nix](https://nix.dev/) or a [composer](https://getcomposer.org/) installation
-
 
 ## Getting started
 
@@ -49,6 +44,12 @@ Use the pack.sh script to pack a production ready version of the plugin into a z
 ```shell
 ./bin/pack.sh
 ```
+
+### Requirements
+
+- [Docker](https://www.docker.com/) or [Podman](https://podman.io/)
+- [Nix](https://nix.dev/) or a [composer](https://getcomposer.org/) installation
+
 
 ## Why choose this starterkit?
 

@@ -10,7 +10,7 @@ experience, ensuring your code is both maintainable and developer-friendly.
 - `src/` contains all raw style and script files that will be transpiled into the `plugin/dist/`
   - `webpack.config.js` wp-scripts configuration
 - `bin/` contains scripts for a release build
-- `docker-compose.yml` can be used to start a development isolated environment WordPress
+- `docker-compose.yml` can be used to start an isolated development WordPress
 - `wp.ini` some php configurations
 - `plugin.php` if you want to clone this repo into your running project, this file will help
 

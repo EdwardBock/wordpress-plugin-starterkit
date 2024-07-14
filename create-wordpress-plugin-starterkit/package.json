@@ -1,0 +1,28 @@
+{
+  "name": "create-wordpress-plugin-starterkit",
+  "version": "0.2.2",
+  "keywords": [
+    "wordpress",
+    "plugin"
+  ],
+  "scripts": {
+    "build": "./bin/build.sh"
+  },
+  "description": "Start a WordPress Plugin with proven structure and ready to use feature classes.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/edwardbock/wordpress-plugin-starterkit",
+    "directory": "create-wordpress-plugin-starterkit"
+  },
+  "author": "Edward Bock <hi@edwardbock.de>",
+  "license": "MIT",
+  "bin": {
+    "start-wordpress-plugin": "./bin/start.sh"
+  },
+  "files": [
+    "template"
+  ],
+  "engines": {
+    "node": ">=18.18.0"
+  }
+}

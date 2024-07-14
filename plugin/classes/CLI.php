@@ -41,7 +41,5 @@ class CLI {
 \WP_CLI::add_command(
 	"starterkit",
 	__NAMESPACE__."\CLI",
-	array(
-		'shortdesc' => 'Starterkit commands.',
-	)
+	[ 'shortdesc' => 'Starterkit commands.' ]
 );

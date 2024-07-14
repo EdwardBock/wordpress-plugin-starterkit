@@ -95,7 +95,7 @@ class Templates {
 	 */
 	function get_sub_dirs(){
 		if($this->sub_dirs == null){
-			$this->sub_dirs = array();
+			$this->sub_dirs = [];
 			$dirs = [];
 			if(is_string($this->theme_dir)){
 				$dirs = array_filter(glob(get_template_directory().'/'.$this->theme_dir.'/*'), 'is_dir');

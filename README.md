@@ -14,11 +14,18 @@ experience, ensuring your code is both maintainable and developer-friendly.
   - `wp.ini` some php configurations
 - `plugin.php` if you want to clone this repo into your running project, this file will help
 
-
 ## Getting started
 
 ```shell
 ## --- Once ---
+
+# create starterkit code directory
+npx create-wordpress-plugin-starterkit
+# or
+pnpm create wordpress-plugin-starterkit
+# or
+bunx create-wordpress-plugin-starterkit
+
 # if you do not have a local php and composer installation
 nix-shell
 
@@ -29,6 +36,7 @@ composer dump-autoload
 cd ..
 
 ## --- Every startup ---
+
 # Startup the wordpress docker environment.
 docker compose up -d
 

@@ -10,7 +10,7 @@ class WPQueryExtension extends Component {
 
 	public function onCreate(): void {
 		parent::onCreate();
-		add_filter('posts_join', array($this, 'posts_join'), 10, 2);
+		add_filter('posts_join', [$this, 'posts_join'], 10, 2);
 		add_filter('posts_orderby', [$this, 'order_by'], 10, 2);
 	}
 

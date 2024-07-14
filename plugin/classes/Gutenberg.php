@@ -9,8 +9,9 @@ class Gutenberg extends Component {
 		parent::onCreate();
 
 		add_action('init', [$this, 'init']);
-		add_action( 'enqueue_block_editor_assets', [ $this, 'enqueue_block_editor_assets' ] );
-		add_action( 'enqueue_block_assets', [ $this, 'enqueue_block_assets' ] );
+		add_action('enqueue_block_editor_assets', [$this, 'enqueue_block_editor_assets']);
+		add_action('enqueue_block_assets', [$this, 'enqueue_block_assets']);
+		add_filter('block_categories_all', [$this, 'block_categories_all']);
 	}
 
 	public function init(): void {
@@ -22,6 +23,19 @@ class Gutenberg extends Component {
 			Plugin::HANDLE_SCRIPT_GUTENBERG,
 			"dist/gutenberg.css",
 		);
+		$path = $this->plugin->path;
+		$dirs = glob("$path/dist/blocks/*", GLOB_ONLYDIR);
+
+		foreach ($dirs as $dir) {
+			$success = register_block_type(
+				$dir,
+				[
+					"render_callback" => function () {
+
+					},
+				]
+			);
+		}
 	}
 
 	public function enqueue_block_editor_assets(): void {
@@ -33,4 +47,14 @@ class Gutenberg extends Component {
 	public function enqueue_block_assets(): void {
 		// EDITOR & FRONTEND
 	}
+
+	public function block_categories_all($categories) {
+		array_unshift($categories, [
+			"slug" => "starterkit",
+			"title" => "Starterkit",
+		]);
+
+		return $categories;
+	}
+
 }

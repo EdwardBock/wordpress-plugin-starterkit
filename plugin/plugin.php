@@ -88,6 +88,7 @@ class Plugin extends Components\Plugin {
 		new PostsTable($this);
 		new Gutenberg($this);
 		new WPQueryExtension($this);
+		new AdminNotice($this);
 
 		if (defined('WP_CLI') && \WP_CLI) {
 			new CLI();

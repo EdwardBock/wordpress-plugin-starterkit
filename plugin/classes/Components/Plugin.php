@@ -29,8 +29,8 @@ abstract class Plugin {
         $this->onCreate();
         $this->tooLateForTextdomain = true;
 
-        register_activation_hook( $this->ref->getFileName(), array( $this, "onActivation" ) );
-        register_deactivation_hook( $this->ref->getFileName(), array( $this, "onDeactivation" ) );
+        register_activation_hook( $this->ref->getFileName(), [$this, "onActivation"]);
+        register_deactivation_hook( $this->ref->getFileName(), [$this, "onDeactivation"]);
 
     }
 
@@ -83,7 +83,7 @@ abstract class Plugin {
     public function foreachMultisite(callable $onSite){
         if ( function_exists( 'is_multisite' ) && is_multisite() ) {
             $network_site = get_network()->site_id;
-            $args         = array( 'fields' => 'ids' );
+            $args         = ['fields' => 'ids'];
             $site_ids     = get_sites( $args );
 
             // run the activation function for each blog id

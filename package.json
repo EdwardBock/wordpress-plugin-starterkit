@@ -8,10 +8,9 @@
 		"pack": "./bin/pack.sh"
 	},
 	"dependencies": {
-		"@wordpress/block-editor": "^13.2.0",
-		"@wordpress/blocks": "^13.2.0",
-		"@wordpress/i18n": "^5.2.0",
-		"@wordpress/scripts": "28.1.0"
+		"@wordpress/block-editor": "13.3.0",
+		"@wordpress/blocks": "13.3.0",
+		"@wordpress/scripts": "28.3.0"
 	},
 	"author": {
 		"name": "Edward Bock",

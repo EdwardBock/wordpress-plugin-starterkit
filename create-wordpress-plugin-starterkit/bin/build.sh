@@ -2,13 +2,13 @@
 
 BASEDIR=$(dirname "$(realpath "$0")")
 
-rm -rf "$BASEDIR/../dist"
+rm -rf "$BASEDIR/../template"
 
 rsync -av \
-  --exclude='.git' \
   --exclude='.idea' \
-  --exclude='create-wordpress-plugin-starterkit' \
-  --exclude='node_modules' \
+  --exclude='.git' \
   --exclude='.github' \
+  --exclude='node_modules' \
+  --exclude='create-wordpress-plugin-starterkit' \
   "$BASEDIR/../.." "$BASEDIR/../template"
 

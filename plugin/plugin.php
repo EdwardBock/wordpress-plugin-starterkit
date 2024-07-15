@@ -4,7 +4,7 @@
  * Plugin Name:         WordPress Plugin Starterkit
  * Description:         It is a starterkit for plugin development
  * Version:             1.0.0
- * Requires at least:   5.0
+ * Requires at least:   6.0
  * Tested up to:        6.5.5
  * Author:              Edward Bock <hi@edwardbock.de>
  * Author URI:          http://www.edwardbock.de/starterkits/wordpress-plugin

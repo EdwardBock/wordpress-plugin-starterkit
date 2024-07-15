@@ -1,9 +1,9 @@
 === %PLUGIN_NAME% ===
 Contributors: edwardbock
 Tags: starterkit
-Requires at least: 5.0
-Tested up to: 6.5.2
-Requires PHP: 8.0
+Requires at least: 6.0
+Tested up to: 6.5.5
+Requires PHP: 8.1
 Stable tag: 1.0.0
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html

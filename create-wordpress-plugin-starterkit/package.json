@@ -6,7 +6,8 @@
     "plugin"
   ],
   "scripts": {
-    "build": "./bin/build.sh"
+    "build": "./bin/build.sh",
+    "prepublishOnly": "npm run build"
   },
   "description": "Start a WordPress Plugin with proven structure and ready to use feature classes.",
   "repository": {
@@ -15,14 +16,15 @@
     "directory": "create-wordpress-plugin-starterkit"
   },
   "author": "Edward Bock <hi@edwardbock.de>",
+  "homepage": "https://www.edwardbock.de",
   "license": "MIT",
   "bin": {
-    "start-wordpress-plugin": "./bin/start.sh"
+    "create-wordpress-plugin-starterkit": "./bin/start.sh"
   },
   "files": [
     "template"
   ],
   "engines": {
-    "node": ">=18.18.0"
+    "node": ">=18"
   }
 }

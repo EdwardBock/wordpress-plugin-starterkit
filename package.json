@@ -17,6 +17,7 @@
 		"email": "hi@edwardbock.de",
 		"url": "https://www.edwardbock.de/starterkits/wordpress-plugin"
 	},
+	"homepage": "https://www.edwardbock.de",
 	"license": "MIT",
 	"engines": {
 		"node": ">=20",

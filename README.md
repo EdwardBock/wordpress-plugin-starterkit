@@ -16,8 +16,10 @@ experience, ensuring your code is both maintainable and developer-friendly.
 
 ## Getting started
 
+### Variant 1: In project
+
 ```shell
-## --- Once ---
+cd your-wordpress-project/wp-content/plugins
 
 # create starterkit code directory
 npx create-wordpress-plugin-starterkit
@@ -25,6 +27,27 @@ npx create-wordpress-plugin-starterkit
 pnpm create wordpress-plugin-starterkit
 # or
 bunx create-wordpress-plugin-starterkit
+
+# change directory into your plugin
+cd name-of-your-plugin-directory
+
+# If you need transpiled TypeScript or JavaScript files.
+pnpm install
+pnpm watch
+```
+
+### Variant 2: Isolated
+
+```shell
+# create starterkit code directory
+npx create-wordpress-plugin-starterkit
+# or
+pnpm create wordpress-plugin-starterkit
+# or
+bunx create-wordpress-plugin-starterkit
+
+# change directory into your plugin
+cd name-of-your-plugin-directory
 
 # if you do not have a local php and composer installation
 nix-shell
@@ -35,14 +58,12 @@ cd plugin
 composer dump-autoload
 cd ..
 
-## --- Every startup ---
-
 # Startup the wordpress docker environment.
 docker compose up -d
 
 # If you need transpiled TypeScript or JavaScript files.
-npm i
-npm run watch
+pnpm install
+pnpm watch
 ```
 
 Goto [localhost:8080](http://localhost:8080/), install WordPress, activate 

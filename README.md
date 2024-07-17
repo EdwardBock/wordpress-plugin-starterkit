@@ -1,14 +1,14 @@
 # WordPress Plugin Starterkit
 
-Are you looking to streamline your WordPress plugin development process? 
-This starterkit is crafted from years of professional plugin development 
+Are you looking to streamline your WordPress plugin development process?
+This starterkit is crafted from years of professional plugin development
 experience, ensuring your code is both maintainable and developer-friendly.
 
 ## In short and sweet
 
 - `plugin/` contains the final WordPress plugin source code
 - `src/` contains all raw style and script files that will be transpiled into the `plugin/dist/`
-  - `webpack.config.js` wp-scripts configuration
+- `src-blocks/` contains all custom gutenberg blocks
 - `bin/` contains scripts for a release build
 - `docker-compose.yml` can be used to start an isolated development WordPress
   - `wp.ini` some php configurations
@@ -33,7 +33,10 @@ cd name-of-your-plugin-directory
 
 # If you need transpiled TypeScript or JavaScript files.
 pnpm install
-pnpm watch
+
+pnpm dev:blocks
+# or
+pnpm dev:scripts
 ```
 
 ### Variant 2: Isolated
@@ -63,10 +66,13 @@ docker compose up -d
 
 # If you need transpiled TypeScript or JavaScript files.
 pnpm install
-pnpm watch
+
+pnpm dev:blocks
+# or
+pnpm dev:scripts
 ```
 
-Goto [localhost:8080](http://localhost:8080/), install WordPress, activate 
+Goto [localhost:8080](http://localhost:8080/), install WordPress, activate
 the plugin and start modifying the code in the `plugin` directory.
 
 Use the pack.sh script to pack a production ready version of the plugin into a zip file.
@@ -88,8 +94,8 @@ Use the pack.sh script to pack a production ready version of the plugin into a z
 
 ### Beyond standard guidelines
 
-While this starterkit does not adhere to the traditional WordPress Coding 
-Guidelines, this is a deliberate choice. Instead, it follows the 
+While this starterkit does not adhere to the traditional WordPress Coding
+Guidelines, this is a deliberate choice. Instead, it follows the
 recommendations from [Write Better WordPress Code](https://medium.com/write-better-wordpress-code) publications.
 
 ### Key features
@@ -99,7 +105,7 @@ recommendations from [Write Better WordPress Code](https://medium.com/write-bett
 - **Community and Third-Party Friendly:** Create plugins and themes that are easy for others to understand and extend.
 
 ### Key technical features
- 
+
 - **PSR-4 Autoloading:** Optimize your code organization and loading times with PSR-4 autoloading, ensuring efficient and standardized file management.
 - **Scheduled Tasks:** Automate and manage recurring tasks seamlessly with built-in scheduling capabilities, enhancing your plugin's efficiency.
 - **REST API Integration:** Leverage the power of the WordPress REST API to create dynamic and interactive applications with ease.

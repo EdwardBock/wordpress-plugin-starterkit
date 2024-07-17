@@ -24,17 +24,10 @@ class Gutenberg extends Component {
 			"dist/gutenberg.css",
 		);
 		$path = $this->plugin->path;
-		$dirs = glob("$path/dist/blocks/*", GLOB_ONLYDIR);
+		$dirs = glob("$path/blocks/*", GLOB_ONLYDIR);
 
 		foreach ($dirs as $dir) {
-			$success = register_block_type(
-				$dir,
-				[
-					"render_callback" => function () {
-
-					},
-				]
-			);
+			register_block_type($dir);
 		}
 	}
 

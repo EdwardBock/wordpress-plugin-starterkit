@@ -24,9 +24,9 @@
 	"author": {
 		"name": "Edward Bock",
 		"email": "hi@edwardbock.de",
-		"url": "https://www.edwardbock.de/starterkits/wordpress-plugin"
+		"url": "https://www.edwardbock.de"
 	},
-	"homepage": "https://www.edwardbock.de",
+	"homepage": "https://www.edwardbock.de/starterkits/wordpress-plugin",
 	"license": "MIT",
 	"engines": {
 		"node": ">=20",

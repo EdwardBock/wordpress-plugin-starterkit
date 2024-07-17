@@ -1,30 +1,34 @@
 {
-  "name": "create-wordpress-plugin-starterkit",
-  "version": "0.3.0",
-  "keywords": [
-    "wordpress",
-    "plugin"
-  ],
-  "scripts": {
-    "build": "./bin/build.sh",
-    "prepublishOnly": "npm run build"
-  },
-  "description": "Start a WordPress Plugin with proven structure and ready to use feature classes.",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/edwardbock/wordpress-plugin-starterkit",
-    "directory": "create-wordpress-plugin-starterkit"
-  },
-  "author": "Edward Bock <hi@edwardbock.de>",
-  "homepage": "https://www.edwardbock.de",
-  "license": "MIT",
-  "bin": {
-    "create-wordpress-plugin-starterkit": "./bin/start.sh"
-  },
-  "files": [
-    "template"
-  ],
-  "engines": {
-    "node": ">=18"
-  }
+	"name": "create-wordpress-plugin-starterkit",
+	"version": "0.3.0",
+	"keywords": [
+		"wordpress",
+		"plugin"
+	],
+	"scripts": {
+		"build": "./bin/build.sh",
+		"prepublishOnly": "npm run build"
+	},
+	"description": "Start a WordPress Plugin with proven structure and ready to use feature classes.",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/edwardbock/wordpress-plugin-starterkit",
+		"directory": "create-wordpress-plugin-starterkit"
+	},
+	"author": {
+		"name": "Edward Bock",
+		"email": "hi@edwardbock.de",
+		"url": "https://www.edwardbock.de"
+	},
+	"homepage": "https://www.edwardbock.de/starterkits/wordpress-plugin",
+	"license": "MIT",
+	"bin": {
+		"create-wordpress-plugin-starterkit": "./bin/start.sh"
+	},
+	"files": [
+		"template"
+	],
+	"engines": {
+		"node": ">=18"
+	}
 }

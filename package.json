@@ -3,15 +3,23 @@
 	"version": "1.0.0",
 	"description": "",
 	"scripts": {
-		"dev": "wp-scripts start",
-		"build": "wp-scripts build",
+		"dev:scripts": "wp-scripts start ./src/admin.ts ./src/gutenberg.ts --output-path=./plugin/dist",
+		"dev:blocks": "wp-scripts start --webpack-src-dir=./src-blocks --output-path=./plugin/blocks",
+		"build:scripts": "wp-scripts build ./src/admin.ts ./src/gutenberg.ts  --output-path=./plugin/dist",
+		"build:blocks": "wp-scripts build --webpack-src-dir=./src-blocks --output-path=./plugin/blocks",
+		"build": "npm run build:scripts && npm run build:blocks",
 		"pack": "./bin/pack.sh"
 	},
-	"dependencies": {
+	"devDependencies": {
+		"@types/wordpress__blocks": "^12.5.14",
 		"@wordpress/block-editor": "13.3.0",
 		"@wordpress/blocks": "13.3.0",
-		"@wordpress/scripts": "28.3.0"
+		"@wordpress/i18n": "^5.3.0",
+		"@wordpress/prettier-config": "^4.3.0",
+		"@wordpress/scripts": "28.3.0",
+		"prettier": "3.3.3"
 	},
+	"prettier": "@wordpress/prettier-config",
 	"author": {
 		"name": "Edward Bock",
 		"email": "hi@edwardbock.de",

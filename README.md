@@ -33,10 +33,7 @@ cd name-of-your-plugin-directory
 
 # If you need transpiled TypeScript or JavaScript files.
 pnpm install
-
-pnpm dev:blocks
-# or
-pnpm dev:scripts
+pnpm build
 ```
 
 ### Variant 2: Isolated
@@ -66,10 +63,7 @@ docker compose up -d
 
 # If you need transpiled TypeScript or JavaScript files.
 pnpm install
-
-pnpm dev:blocks
-# or
-pnpm dev:scripts
+pnpm build
 ```
 
 Goto [localhost:8080](http://localhost:8080/), install WordPress, activate

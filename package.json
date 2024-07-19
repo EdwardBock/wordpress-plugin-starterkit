@@ -11,12 +11,12 @@
 		"pack": "./bin/pack.sh"
 	},
 	"devDependencies": {
-		"@types/wordpress__block-editor": "^11.5.15",
-		"@types/wordpress__blocks": "^12.5.14",
+		"@types/wordpress__block-editor": "11.5.15",
+		"@types/wordpress__blocks": "12.5.14",
 		"@wordpress/block-editor": "13.3.0",
 		"@wordpress/blocks": "13.3.0",
-		"@wordpress/i18n": "^5.3.0",
-		"@wordpress/prettier-config": "^4.3.0",
+		"@wordpress/i18n": "5.3.0",
+		"@wordpress/prettier-config": "4.3.0",
 		"@wordpress/scripts": "27.9.0",
 		"prettier": "3.3.3"
 	},

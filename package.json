@@ -2,32 +2,42 @@
 	"name": "wordpress-plugin-starterkit",
 	"version": "1.0.0",
 	"description": "",
-	"scripts": {
-		"dev:scripts": "wp-scripts start ./src/admin.ts ./src/gutenberg.ts --output-path=./plugin/dist",
-		"dev:blocks": "wp-scripts start --webpack-src-dir=./src-blocks --output-path=./plugin/blocks",
-		"build:scripts": "wp-scripts build ./src/admin.ts ./src/gutenberg.ts  --output-path=./plugin/dist",
-		"build:blocks": "wp-scripts build --webpack-src-dir=./src-blocks --output-path=./plugin/blocks",
-		"build": "npm run build:scripts && npm run build:blocks",
-		"pack": "./bin/pack.sh"
-	},
-	"devDependencies": {
-		"@types/wordpress__block-editor": "11.5.15",
-		"@types/wordpress__blocks": "12.5.14",
-		"@wordpress/block-editor": "13.3.0",
-		"@wordpress/blocks": "13.3.0",
-		"@wordpress/i18n": "5.3.0",
-		"@wordpress/prettier-config": "4.3.0",
-		"@wordpress/scripts": "27.9.0",
-		"prettier": "3.3.3"
-	},
-	"prettier": "@wordpress/prettier-config",
+	"homepage": "https://www.edwardbock.de/starterkits/wordpress-plugin",
+	"license": "MIT",
 	"author": {
 		"name": "Edward Bock",
 		"email": "hi@edwardbock.de",
 		"url": "https://www.edwardbock.de"
 	},
-	"homepage": "https://www.edwardbock.de/starterkits/wordpress-plugin",
-	"license": "MIT",
+	"scripts": {
+		"build": "npm run build:scripts && npm run build:blocks",
+		"build:blocks": "wp-scripts build --webpack-src-dir=./src-blocks --output-path=./plugin/blocks",
+		"build:scripts": "wp-scripts build ./src/admin.ts ./src/gutenberg.ts  --output-path=./plugin/dist",
+		"dev:blocks": "wp-scripts start --webpack-src-dir=./src-blocks --output-path=./plugin/blocks",
+		"dev:scripts": "wp-scripts start ./src/admin.ts ./src/gutenberg.ts --output-path=./plugin/dist",
+		"pack": "./bin/pack.sh",
+		"wp-env": "wp-env"
+	},
+	"prettier": "@wordpress/prettier-config",
+	"devDependencies": {
+		"@types/wordpress__block-editor": "^11.5.15",
+		"@types/wordpress__blocks": "^12.5.14",
+		"@wordpress/block-editor": "^14.3.1",
+		"@wordpress/blocks": "^13.8.1",
+		"@wordpress/components": "^28.8.0",
+		"@wordpress/core-data": "^7.8.0",
+		"@wordpress/data": "^10.8.0",
+		"@wordpress/edit-post": "^8.8.3",
+		"@wordpress/element": "^6.8.1",
+		"@wordpress/env": "^10.8.0",
+		"@wordpress/i18n": "^5.8.1",
+		"@wordpress/plugins": "^7.8.1",
+		"@wordpress/prettier-config": "^4.8.1",
+		"@wordpress/scripts": "^30.0.2",
+		"@wordpress/server-side-render": "^5.8.1",
+		"@wordpress/wordcount": "^4.8.1",
+		"prettier": "^3.3.3"
+	},
 	"engines": {
 		"node": ">=20",
 		"pnpm": ">=9"

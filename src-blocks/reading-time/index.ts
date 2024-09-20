@@ -17,8 +17,10 @@ import './style.scss';
 /**
  * Internal dependencies
  */
-import Edit from './edit';
+// @ts-ignore
 import metadata from './block.json';
+import Edit from './edit';
+import save from './save';
 
 console.debug('REGISTER reading time block');
 /**
@@ -28,7 +30,11 @@ console.debug('REGISTER reading time block');
  */
 registerBlockType(metadata.name, {
 	/**
-	 * @see ./edit.js
+	 * @see ./edit.tsx
 	 */
 	edit: Edit,
+	/**
+	 * @see ./save.tsx
+	 */
+	save: save,
 });

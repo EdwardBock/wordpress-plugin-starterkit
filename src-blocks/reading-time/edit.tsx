@@ -20,6 +20,7 @@ import { useBlockProps } from '@wordpress/block-editor';
  * @see https://www.npmjs.com/package/@wordpress/scripts#using-css
  */
 import './editor.scss';
+import { type BlockEditProps } from '@wordpress/blocks';
 
 /**
  * The edit function describes the structure of your block in the context of the
@@ -27,12 +28,14 @@ import './editor.scss';
  *
  * @see https://developer.wordpress.org/block-editor/reference-guides/block-api/block-edit-save/#edit
  *
- * @return {Element} Element to render.
  */
-export default function Edit() {
+export type Attributes = {
+	variant: string;
+};
+export default function Edit(props: BlockEditProps<Attributes>) {
 	return (
-		<p { ...useBlockProps() }>
-			{ __( 'Reading Time – hello from the editor!', 'reading-time' ) }
+		<p {...useBlockProps()}>
+			{__('Reading Time – hello from the editor!', 'reading-time')}
 		</p>
 	);
 }

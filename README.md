@@ -8,10 +8,9 @@ experience, ensuring your code is both maintainable and developer-friendly.
 
 - `plugin/` contains the final WordPress plugin source code
 - `src/` contains all raw style and script files that will be transpiled into the `plugin/dist/`
-- `src-blocks/` contains all custom gutenberg blocks
+- `src-blocks/` contains all custom gutenberg [blocks](https://developer.wordpress.org/block-editor/getting-started/fundamentals/)
 - `bin/` contains scripts for a release build
-- `docker-compose.yml` can be used to start an isolated development WordPress
-  - `wp.ini` some php configurations
+- `.wp-env.json` configuration for [wp-env](https://developer.wordpress.org/block-editor/reference-guides/packages/packages-env/)
 - `plugin.php` if you want to clone this repo into your running project, this file will help
 
 ## Getting started
@@ -30,6 +29,15 @@ bunx create-wordpress-plugin-starterkit
 
 # change directory into your plugin
 cd name-of-your-plugin-directory
+
+# if you do not have a local php and composer installation
+nix-shell
+
+# build the vendor directory for psr-4 autoloading
+# this needs to be executed after every root namespace change
+cd plugin
+composer dump-autoload
+cd ..
 
 # If you need transpiled TypeScript or JavaScript files.
 pnpm install
@@ -59,15 +67,14 @@ composer dump-autoload
 cd ..
 
 # Startup the wordpress docker environment.
-docker compose up -d
+npm run wp-env start
 
 # If you need transpiled TypeScript or JavaScript files.
 pnpm install
 pnpm build
 ```
 
-Goto [localhost:8080](http://localhost:8080/), install WordPress, activate
-the plugin and start modifying the code in the `plugin` directory.
+Goto [localhost:8888](http://localhost:8888/) and start modifying the code in the `plugin` directory.
 
 Use the pack.sh script to pack a production ready version of the plugin into a zip file.
 

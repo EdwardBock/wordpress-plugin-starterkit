@@ -19,7 +19,4 @@
  *
  * @see https://developer.wordpress.org/block-editor/reference-guides/block-api/block-metadata/#view-script
  */
-
-/* eslint-disable no-console */
-console.log( 'Hello World! (from starterkit-reading-time block)' );
-/* eslint-enable no-console */
+console.log('Hello World! (from starterkit-reading-time block)');

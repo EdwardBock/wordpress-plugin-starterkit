@@ -75,6 +75,10 @@ pnpm build
 ```
 
 Goto [localhost:8888](http://localhost:8888/) and start modifying the code in the `plugin` directory.
+Default login credentials are username: `admin` password: `password`.
+
+- admin
+- password
 
 Use the pack.sh script to pack a production ready version of the plugin into a zip file.
 

@@ -23,11 +23,11 @@ class Admin extends Component {
 
 		$this->plugin->assets->registerScript(
 			Plugin::HANDLE_SCRIPT_ADMIN,
-			"dist/admin.js"
+			"dist/admin.ts.js"
 		);
 		$this->plugin->assets->registerStyle(
 			Plugin::HANDLE_STYLE_ADMIN,
-			"dist/admin.css"
+			"dist/admin.ts.css"
 		);
 
 	}

@@ -17,11 +17,11 @@ class Gutenberg extends Component {
 	public function init(): void {
 		$this->plugin->assets->registerScript(
 			Plugin::HANDLE_SCRIPT_GUTENBERG,
-			"dist/gutenberg.js",
+			"dist/gutenberg.ts.js",
 		);
 		$this->plugin->assets->registerStyle(
 			Plugin::HANDLE_SCRIPT_GUTENBERG,
-			"dist/gutenberg.css",
+			"dist/gutenberg.ts.css",
 		);
 		$path = $this->plugin->path;
 		$dirs = glob("$path/blocks/*", GLOB_ONLYDIR);
